@@ -1,0 +1,199 @@
+$font-stack: Helvetica, Arial, sans-serif;
+@mixin blueButton() {
+    background-color: #65c7d6;
+    flex: 0.2 1 auto;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    height: 4em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    line-height: 4em;
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+        z-index: 4;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+        background-color: white;
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+        background-color: white;
+    }
+    
+}
+
+header:first-child{
+    z-index: 3;
+}
+
+#sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 5em;
+    transition: 0.5s;
+
+    a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    a:hover{
+        color: red;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+main {
+    height: 100vh;
+    color: black;
+    background-color: rgba($color: #e8e8e8, $alpha: 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: linear-gradient(rgba(211, 211, 211, 0.6), rgba(211, 211, 211, 0.6)), url('icebergimage.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img {
+        width: 100%;
+        pointer-events: none;
+        z-index: -1;
+        position: absolute;
+        text-align: left;
+        display: block;
+        object-fit: cover;
+    }
+
+    .content {
+        align-self: center;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    h1{
+        width: 70%;
+        margin-top: 8em;
+    }
+
+    p{
+        width: 70%;
+        margin: 5px;
+    }
+
+    button {
+        @include blueButton;
+    }
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: -5em 10% 0 10%;
+    max-width: 1200px;
+    text-align: center;
+    background-color: white;
+    padding: 2em;
+    border-radius: 5px;
+    background-color: grey;
+    box-shadow: 3px 3px 2px black;
+
+    h2{
+        margin-bottom: 50px;
+    }
+
+    #projectBox {
+        display: grid;
+        grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
+        place-items: center;
+        gap: 20px;
+        img{
+        height: 100px;
+        width: 100px;
+        }
+
+        div{
+            padding: 24px;
+            margin: 0 100px 0 100px;
+            min-width: 200px;
+        }
+    }
+
+
+
+}
+
+#currentproject {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 10em;
+
+    img{
+        width: 30%;
+        background-color: grey;
+    }
+
+    article{
+        width: 40%;
+    }
+}
+
+#skills{
+    margin-top: 10em;
+}
+
+#aboutme{
+    margin-top: 10em;
+}

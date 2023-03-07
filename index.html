@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <span id="bars" onclick="navControl()">
+            <div id="bar1" class="bar1"></div>
+            <div id="bar2" class="bar2"></div>
+            <div id="bar3" class="bar3"></div>
+        </span>
+        <h2>Sam Peterson, Web Developer</h2>
+        <button>day night mode</button>
+    </header>
+
+    <div id="sideNav" class="sidenav">
+        <a class="navLink" href="#projects">My Projects</a>
+        <a class="navLink" href="#currentproject">Current Project</a>
+        <a class="navLink" href="#skills">What can I do for you?</a>
+        <a class="navLink" href="#aboutme">About Me</a>
+        <a class="navLink" href="#">Contact</a>
+    </div>
+
+
+    <main>
+        <h1 class="content">Seeking a role in web development as well as any feedback on my work.</h1>
+        <p class="content">This page is both a template and an example for the work I can do for clients. I have a background in teaching, but I wanted a job that provided more freedom for my family. I taught myself the tools of web design. I want to use those skills to make an impact.</p>
+        <button class="content">send me an email</button>
+    </main>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div id="projectBox">
+            <div id="shoppingCart">
+                <img src="" alt="">
+                <h3 class="projectTitle">Shopping Cart</h4>
+                <p class="projectBlurb">Coded in reactJS to simulate a shop page</p>
+            </div>
+            <div id="bigCity">
+                <img src="" alt="">
+                <h3 class="projectTitle">Big City, USA</h4>
+                <p class="projectBlurb">Coded in vanilla JS to </p>
+            </div>
+        </div>
+    </section>
+    <section id="currentproject">
+        <img src="" alt="">
+        <article>
+            <h2>Current Project</h2>
+            <h3>Project: Microblog</h3>
+            <div>
+                <p class="question">What is it? </p>
+                <p class="blurb">Using the Mastodon API to turn that feed into something more like a microblog.</p>
+            </div>
+            <div>
+                <p class="question">Why this project? </p>
+                <p class="blurb">I want more experience working with an API, and I think this is just fun.</p>
+            </div>
+        </article>
+    </section>
+    <section id="skills">
+        <h2>What can I do for you?</h2>
+
+    </section>
+    <section id="aboutme">
+        <h2>about me</h2>
+
+    </section>
+</body>
+<script>
+    const navLinks = document.querySelectorAll('.navLink');
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            navControl();
+        })
+    })
+
+    let navStatus= false;
+
+    function navControl() {
+        document.getElementById("bars").classList.toggle("change");
+
+        if (navStatus === false) {
+            navStatus = true;
+            document.getElementById("sideNav").style.width = "250px";
+        } else {
+            navStatus = false;
+            document.getElementById("sideNav").style.width = "0";
+        }
+    }
+</script>
+</html>
