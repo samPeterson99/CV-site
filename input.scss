@@ -13,19 +13,19 @@ $font-stack: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     font-family: $font-stack;
-    font-size: 2vw;
+    font-size: clamp(8px, 1.5vw, 80px);
 }
 
 h1{
-    font-size: 4vw;
+    font-size: clamp(12px, 3vw, 120px);
 }
 
 h2{
-    font-size: 3.2vw;
+    font-size: clamp(11px, 2.8vw, 100px);
 }
 
 h3{
-    font-size: 3vw;
+    font-size: clamp(10px, 2.5vw, 90px);
 }
 
 
@@ -49,7 +49,7 @@ header {
 
     .bar1, .bar2, .bar3 {
         width: 4vh;
-        height: .5vh;
+        height: 0.5vh;
         background-color: #333;
         margin: 1vh 4vw;
         transition: 0.4s;
@@ -57,7 +57,7 @@ header {
     }
 
     .change .bar1 {
-        transform: translate(0, 12.5px) rotate(-45deg);
+        transform: translate(0, 1.5vh) rotate(-45deg);
         background-color: white;
     }
 
@@ -66,7 +66,7 @@ header {
     }
 
     .change .bar3 {
-        transform: translate(0, -12.5px) rotate(45deg);
+        transform: translate(0, -1.5vh) rotate(45deg);
         background-color: white;
     }
 
@@ -171,18 +171,20 @@ main {
 
     #projectBox {
         display: grid;
-        grid-template-columns: repeat( auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat( auto-fill, minmax(280px, 1fr));
         place-items: center;
-        gap: 5vw;
+        gap: 9vw;
         img{
         height: 10vh;
         width: 10vh;
+        max-width: 600px;
         }
 
         div{
-            padding: 4vw;
-            width: 30vw;
-            margin: 1vw;
+            padding: 2vw;
+            width: 40vw;
+            min-width: 500px;
+            max-width: 600px;
         }
     }
 
@@ -195,12 +197,12 @@ main {
     flex-direction: row;
     justify-content: space-between;
     border: 1px solid black;
-    height: 40vh;
+    height: 30vw;
 
     margin-top: 10em;
 
     img{
-        width: 30%;
+        width: 30vw;
         background-color: grey;
     }
 
