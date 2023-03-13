@@ -2,6 +2,19 @@
   margin: 0;
   padding: 0;
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 2vw;
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+h2 {
+  font-size: 3.2vw;
+}
+
+h3 {
+  font-size: 3vw;
 }
 
 body {
@@ -20,10 +33,10 @@ header {
   text-align: center;
 }
 header .bar1, header .bar2, header .bar3 {
-  width: 35px;
-  height: 5px;
+  width: 6vw;
+  height: 1vh;
   background-color: #333;
-  margin: 6px 0;
+  margin: 1vh 0;
   transition: 0.4s;
   z-index: 4;
 }
@@ -39,7 +52,7 @@ header .change .bar3 {
   background-color: white;
 }
 header button {
-  width: 35px;
+  width: 5vw;
 }
 
 header:first-child {
@@ -55,11 +68,11 @@ header:first-child {
   left: 0;
   background-color: black;
   overflow-x: hidden;
-  padding-top: 5em;
+  padding-top: 20vh;
   transition: 0.5s;
 }
 #sideNav a {
-  padding: 8px 8px 8px 32px;
+  padding: 2vh 2vw 2vh 6vw;
   text-decoration: none;
   color: white;
   display: block;
@@ -69,11 +82,6 @@ header:first-child {
   color: red;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-}
 main {
   height: 100vh;
   color: black;
@@ -102,11 +110,11 @@ main .content {
 }
 main h1 {
   width: 70%;
-  margin-top: 8em;
+  margin-top: 35vh;
 }
 main p {
   width: 70%;
-  margin: 5px;
+  margin: 2vh;
 }
 main button {
   background-color: #65c7d6;
@@ -114,43 +122,47 @@ main button {
   color: white;
   border: none;
   padding: 10px;
+  margin-bottom: 5px;
 }
 
 #projects {
   display: flex;
   flex-direction: column;
   align-content: center;
-  margin: -5em 10% 0 10%;
-  max-width: 1200px;
+  margin: -10vh 10% 0 10%;
+  max-width: 70vw;
   text-align: center;
   background-color: white;
   padding: 2em;
   border-radius: 5px;
   background-color: grey;
-  box-shadow: 3px 3px 2px black;
+  box-shadow: 1vw 1vw 2vw black;
 }
 #projects h2 {
   margin-bottom: 50px;
 }
 #projects #projectBox {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
   place-items: center;
-  gap: 20px;
+  gap: 5vw;
 }
 #projects #projectBox img {
-  height: 100px;
-  width: 100px;
+  height: 10vh;
+  width: 10vh;
 }
 #projects #projectBox div {
-  padding: 24px;
-  min-width: 200px;
+  padding: 4vw;
+  width: 30vw;
+  margin: 1vw;
 }
 
 #currentproject {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border: 1px solid black;
+  height: 40vh;
   margin-top: 10em;
 }
 #currentproject img {
@@ -162,11 +174,11 @@ main button {
 }
 
 #skills {
-  margin-top: 10em;
+  margin-top: 10vh;
 }
 
 #aboutme {
-  margin-top: 10em;
+  margin-top: 10vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

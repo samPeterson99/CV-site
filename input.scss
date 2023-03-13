@@ -13,6 +13,19 @@ $font-stack: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     font-family: $font-stack;
+    font-size: 2vw;
+}
+
+h1{
+    font-size: 4vw;
+}
+
+h2{
+    font-size: 3.2vw;
+}
+
+h3{
+    font-size: 3vw;
 }
 
 
@@ -35,10 +48,10 @@ header {
     text-align: center;
 
     .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 5px;
+        width: 6vw;
+        height: 1vh;
         background-color: #333;
-        margin: 6px 0;
+        margin: 1vh 0;
         transition: 0.4s;
         z-index: 4;
     }
@@ -58,7 +71,7 @@ header {
     }
 
     button {
-        width: 35px;
+        width: 5vw;
     }
     
 }
@@ -76,11 +89,11 @@ header:first-child{
     left: 0;
     background-color: black;
     overflow-x: hidden;
-    padding-top: 5em;
+    padding-top: 20vh;
     transition: 0.5s;
 
     a{
-        padding: 8px 8px 8px 32px;
+        padding: 2vh 2vw 2vh 6vw;
         text-decoration: none;
         color: white;
         display: block;
@@ -92,9 +105,6 @@ header:first-child{
     }
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-}
 
 main {
     height: 100vh;
@@ -128,16 +138,17 @@ main {
 
     h1{
         width: 70%;
-        margin-top: 8em;
+        margin-top: 35vh;
     }
 
     p{
         width: 70%;
-        margin: 5px;
+        margin: 2vh;
     }
 
     button {
         @include blueButton;
+        margin-bottom: 5px;
     }
 }
 
@@ -145,14 +156,14 @@ main {
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin: -5em 10% 0 10%;
-    max-width: 1200px;
+    margin: -10vh 10% 0 10%;
+    max-width: 70vw;
     text-align: center;
     background-color: white;
     padding: 2em;
     border-radius: 5px;
     background-color: grey;
-    box-shadow: 3px 3px 2px black;
+    box-shadow: 1vw 1vw 2vw black;
 
     h2{
         margin-bottom: 50px;
@@ -160,17 +171,18 @@ main {
 
     #projectBox {
         display: grid;
-        grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat( auto-fill, minmax(25vw, 1fr));
         place-items: center;
-        gap: 20px;
+        gap: 5vw;
         img{
-        height: 100px;
-        width: 100px;
+        height: 10vh;
+        width: 10vh;
         }
 
         div{
-            padding: 24px;
-            min-width: 200px;
+            padding: 4vw;
+            width: 30vw;
+            margin: 1vw;
         }
     }
 
@@ -182,6 +194,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 1px solid black;
+    height: 40vh;
 
     margin-top: 10em;
 
@@ -196,9 +210,9 @@ main {
 }
 
 #skills{
-    margin-top: 10em;
+    margin-top: 10vh;
 }
 
 #aboutme{
-    margin-top: 10em;
+    margin-top: 10vh;
 }
